@@ -1,113 +1,110 @@
-# 🤖 Drehen und Wenden in RoboTown!
-## Session 2: Dein Explorer-Bot lernt das Drehen
+# 🤖 RoboTown Abenteuer - Session 2
+## Präzises Drehen & Navigation durch RoboTown
 
-### 🌟 Die Geschichte
-Toll gemacht! Du hast den ersten Hinweis gefunden. Aber die Straßen von RoboTown sind voller Kurven und Ecken. Um der Schatzkarte zu folgen, muss dein Explorer-Bot lernen, sich genau zu drehen. Bist du bereit für das nächste Abenteuer?
+### 📜 Die Geschichte geht weiter...
+Willkommen zurück, junger Roboter-Ingenieur! Die Straßen von RoboTown sind voller Kurven und Wendungen. Um der Schatzkarte zu folgen, muss dein Explorer Bot ganz genau drehen können. Zum Glück hat dein Roboter einen eingebauten Gyro-Sensor im Hub - das ist wie ein elektronischer Kompass!
 
-### 📦 Was du heute brauchst
-- Deinen Explorer-Bot von Session 1
-- Einen Gyro-Sensor
-- Ein Maßband oder Lineal
-- Klebeband zum Markieren des Bodens
+### 🎯 Was wir heute lernen:
+- Wie dein Roboter sich perfekt drehen kann
+- Wie der Gyro-Sensor uns dabei hilft
+- Wie wir den Roboter wieder gerade ausrichten können
 
-### 🎯 Neue Superkraft: Der Gyro-Sensor!
-Der Gyro-Sensor ist wie ein Kompass für deinen Roboter. Er hilft ihm zu wissen, wie weit er sich gedreht hat.
+### 🛠️ Was du brauchst:
+- Deinen Explorer Bot von Session 1
+- Einen Computer mit der Pybricks App
+- Eine freie Fläche zum Testen (mindestens 1m x 1m)
 
-#### Den Gyro-Sensor einbauen
-1. Befestige den Sensor vorne am Roboter
-2. Achte darauf, dass er gerade sitzt
-3. Verbinde ihn mit **Port C**
-4. Der Sensor muss ganz still halten - kein Wackeln!
+### 🎮 Los geht's!
 
-### 🔄 Lass uns drehen!
+#### 1️⃣ Erste Drehungen
+So lässt du deinen Roboter drehen:
 
-#### Methode 1: Drehen mit unterschiedlichen Motor-Geschwindigkeiten
-```
-Tipp: Wenn sich ein Motor schneller dreht als der andere, 
-fährt dein Roboter eine Kurve!
-```
+1. Ziehe einen "Motoren steuern" Block in dein Programm
+2. Wähle beide Motoren aus
+3. Stelle ein:
+   - Linker Motor: +50% Geschwindigkeit
+   - Rechter Motor: -50% Geschwindigkeit
+4. Füge einen "Warte" Block mit 1 Sekunde hinzu
 
-1. **Sanfte Kurve:**
-   - Linker Motor: schnell
-   - Rechter Motor: langsam
+**🎈 Probier es aus:**
+1. Starte das Programm
+2. Was passiert?
+3. Verändere die Zeit im "Warte" Block - dreht sich dein Roboter weiter oder weniger weit?
 
-2. **Enge Kurve:**
-   - Linker Motor: schnell vorwärts
-   - Rechter Motor: schnell rückwärts
+#### 2️⃣ Der Gyro-Sensor ist dein Freund!
+Jetzt wird's spannend! Der Gyro-Sensor in deinem Hub ist wie ein super-schlauer Helfer, der genau weiß, wie weit sich dein Roboter gedreht hat.
 
-### 🎮 Drehen mit dem Gyro-Sensor
+So baust du eine präzise 90-Grad-Drehung:
 
-#### Programmier-Blöcke für den Gyro-Sensor
-1. **Sensor zurücksetzen**
-   - Zu Beginn immer den Sensor auf 0 setzen
-   - Dein Roboter "vergisst" alte Drehungen
+1. Ziehe einen "Gyro zurücksetzen" Block in dein Programm
+2. Füge eine "Wiederhole bis"-Schleife hinzu
+3. Als Bedingung wählst du: "Gyro-Winkel > 90"
+4. In die Schleife kommen:
+   - "Motoren steuern" Block (wie oben)
+   - Langsame Geschwindigkeit (30%)
+5. Nach der Schleife: "Motoren stoppen" Block
 
-2. **Genau drehen**
-   - Wähle "Drehen um Grad"
-   - Gib die Gradzahl ein:
-     - 90 Grad = Vierteldrehung
-     - 180 Grad = Halbe Drehung
-     - 360 Grad = Ganze Drehung
+**🎈 Das musst du wissen:**
+- `90` Grad ist eine Vierteldrehung (wie wenn du nach rechts abbiegst)
+- `180` Grad ist eine halbe Drehung (du schaust nach hinten)
+- `360` Grad ist eine ganze Drehung (wieder zum Start)
 
-### 🎯 Spannende Übungen
+#### 3️⃣ Lass uns ein Quadrat fahren!
+Jetzt wird's richtig cool - wir lassen deinen Roboter ein Quadrat fahren!
 
-#### Übung 1: Der Roboter-Kompass
-1. Markiere mit Klebeband eine große + Form auf dem Boden
-2. Programmiere deinen Roboter:
-   - Start in der Mitte
-   - Drehe 90 Grad nach rechts
-   - Warte 1 Sekunde
-   - Wiederhole 4 mal
+So geht's:
+1. "Wiederhole 4 mal" Block
+2. Darin:
+   - "Motoren steuern" Block für Geradeausfahrt (beide +50%)
+   - "Warte" Block (1 Sekunde)
+   - Die Blöcke für die 90-Grad-Drehung von oben
 
-#### Übung 2: Die Schatzkarten-Navigation
-1. Lege einen Parcours mit 3 Richtungswechseln
-2. Markiere Start und Ziel
-3. Programmiere deinen Roboter:
-   - Fahre zum ersten Punkt
-   - Drehe in die richtige Richtung
-   - Weiter zum nächsten Punkt
-   - Geschafft wenn du am Ziel bist!
+### 🎯 Aufgaben zum Üben:
 
-### 🔍 Tricks für genaues Drehen
+#### 😊 Einfach:
+1. Lass deinen Roboter ein Dreieck fahren (drei Seiten, drei 120-Grad-Drehungen)
+2. Programmiere eine komplette Drehung (360 Grad)
 
-#### An der Wand ausrichten
-1. Fahre vorsichtig rückwärts zur Wand
-2. Berühre die Wand ganz sanft
-3. Jetzt steht dein Roboter gerade!
-4. Setze den Gyro-Sensor auf 0
-5. Nun kannst du genau drehen
+#### 🤔 Mittel:
+1. Fahre ein "Z" - drei gerade Strecken, zwei 45-Grad-Drehungen
+2. Lass deinen Roboter tanzen - abwechselnd drehen und fahren
 
-### 💡 Wichtige Tipps
-- Dein Roboter sollte beim Drehen stillstehen
-- Drehe immer langsam und vorsichtig
-- Prüfe vor dem Start, ob der Gyro-Sensor auf 0 steht
-- Bei ungenauen Drehungen: Batterien prüfen!
+#### 🌟 Schwer:
+1. Programmiere einen "Stern" - fünf Spitzen mit jeweils 72-Grad-Drehungen
+2. Lass deinen Roboter deinen Namen "schreiben"
 
-### 📝 Für dein Logbuch
-Schreibe auf:
-- Welche Drehung war am genauesten?
-- Was passiert bei unterschiedlichen Geschwindigkeiten?
-- Wie oft musstest du den Gyro-Sensor zurücksetzen?
+### 💡 Tipps und Tricks:
+- Mach die Drehungen langsam (kleine Zahlen bei der Geschwindigkeit)
+- Teste deine Programme auf einer glatten Fläche
+- Wenn dein Roboter nicht genau dreht, überprüfe ob:
+  - die Räder sauber sind
+  - der Roboter beim Start gerade steht
+  - die Batterien noch gut sind
 
-### 🌟 Extra-Herausforderungen
-Kannst du...
-- eine perfekte Acht fahren?
-- deinen Namen "schreiben"?
-- einen Stern-Parcours fahren?
+### 🌈 Kreativ-Challenge:
+Erfinde deine eigene "Roboter-Tanzchoreografie"! Kombiniere:
+- Verschiedene Drehungen
+- Unterschiedliche Fahrstrecken
+- Kurze und lange Pausen
 
-### 🎓 Das hast du heute gelernt
-- Wie der Gyro-Sensor funktioniert
-- Verschiedene Arten zu drehen
-- Genaues Navigieren
-- Sich an der Wand ausrichten
+### 🎨 Block-Farben-Guide:
+- Bewegungs-Blöcke sind GRÜN
+- Sensor-Blöcke sind BLAU
+- Schleifen-Blöcke sind ORANGE
+- Warte-Blöcke sind GELB
 
-### 🎉 Toll gemacht!
-Du bist jetzt ein echter Dreh-Experte! In der nächsten Session lernen wir, wie dein Roboter selbständig Entscheidungen treffen kann.
+### 🎉 Gut gemacht!
+Du hast gelernt, wie dein Roboter sich präzise drehen kann! In der nächsten Session lernen wir, wie dein Roboter selbst Entscheidungen treffen kann.
 
-### 🤔 Denk dran
-- Immer den Gyro-Sensor zu Beginn auf 0 setzen
-- Langsam und präzise arbeiten
-- Bewegungen vorher planen
-- Geduldig sein - Übung macht den Meister!
+### 🤔 Fragen zum Nachdenken:
+- Warum ist präzises Drehen wichtig für Roboter?
+- Welche Alltagsaufgaben brauchen genaue Drehungen?
+- Wie könnte ein Roboter ohne Gyro-Sensor drehen?
 
-Viel Spaß beim Drehen und Wenden! 🚀
+### 📝 Notizen:
+Schreib auf, was heute gut geklappt hat und was nicht. Das hilft dir beim nächsten Mal!
+
+---
+**💫 Bonus-Wissen:** Der Gyro-Sensor misst nicht nur Drehungen, sondern kann auch erkennen, ob dein Roboter bergauf oder bergab fährt! Das werden wir in späteren Sessions nutzen...
+
+Viel Spaß beim Experimentieren! 🚀
