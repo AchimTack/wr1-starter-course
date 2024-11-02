@@ -7,7 +7,7 @@ In RoboTown wartet ein geheimnisvoller Schatz darauf, von dir gefunden zu werden
 
 ### Deine Missionen
 
-1. [Dein erster Roboter](session-1/1.1.md) - Bauen und erste Bewegungen
+1. [Dein erster Roboter](session-1/1.1-moin.md) - Bauen und erste Bewegungen
 2. [Perfekte Wendungen](session-2.md) - Drehen und Navigieren
 3. [Schlaue Entscheidungen](session-3.md) - Schleifen und Bedingungen
 4. [Hindernisse erkennen](session-4.md) - Der Ultraschall-Sensor
